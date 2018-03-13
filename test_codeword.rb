@@ -5,7 +5,8 @@ class Codeword_Test < Minitest::Test
   def test_true
     assert_equal(true,true)
   end
-  def test_codeword_returns_hash
-    assert_equal(Hash, codeword.class)
+  def test_codeword_returns_string
+    hash1 = { bird: "chicken"}
+    assert_equal(String, codeword(hash1).class)
   end
 end
