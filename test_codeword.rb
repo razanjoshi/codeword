@@ -12,4 +12,8 @@ class Codeword_Test < Minitest::Test
     code = codeword(404)
     assert_equal("Page not found.", code)
   end
+  def test_codeword_502_return
+    code = codeword(502)
+    assert_equal("Bad gateway.", code)
+  end
 end
