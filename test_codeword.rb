@@ -6,7 +6,10 @@ class Codeword_Test < Minitest::Test
     assert_equal(true,true)
   end
   def test_codeword_returns_string
-    hash1 = { bird: "chicken"}
-    assert_equal(String, codeword(hash1).class)
+    assert_equal(String, codeword(404).class)
+  end
+  def test_codeword_404_return
+    code = codeword(404)
+    assert_equal("Page not found.", code)
   end
 end
